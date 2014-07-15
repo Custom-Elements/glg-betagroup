@@ -1,0 +1,12 @@
+<link rel="import" href="../node_modules/glg-current-user/src/glg-current-user.html" />
+<polymer-element name="glg-betagroup" attributes="firstName betaGroups betagroup"
+  on-user="{{onUser}}">
+<template>
+  <link rel="stylesheet" type="text/css" href="./glg-betagroup.less">
+  <glg-current-user></glg-current-user>
+  <template if="{{inBeta}}">
+  <content></content>
+  </template>
+</template>
+<script src="./glg-betagroup.litcoffee"></script>
+</polymer-element>
