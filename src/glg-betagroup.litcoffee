@@ -14,7 +14,9 @@
 ##Event Handlers
 
       onUser: (evt, detail) ->
-        @inBeta = @betagroup in detail.betagroups
+        @inBeta = @betagroup in detail.betagroups if detail.betagroups?
+
+        
 ##Polymer Lifecycle
 
       created: ->
