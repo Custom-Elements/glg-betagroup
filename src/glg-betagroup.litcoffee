@@ -14,12 +14,15 @@
 ##Event Handlers
 
       onUser: (evt, detail) ->
+        #@rt = if @rendertemplate is null then true else @rendertemplate
         @inBeta = @betagroup in detail.betagroups if detail.betagroups?
+        @render = if @inBeta is true & @rendertemplate is true then true else false
 
-        
+
 ##Polymer Lifecycle
 
       created: ->
+        @rendertemplate = true
 
       ready: ->
 
@@ -28,4 +31,3 @@
       domReady: ->
 
       detached: ->
-
