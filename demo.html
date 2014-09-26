@@ -15,13 +15,15 @@
   </head>
   <body unresolved>
     <div id="holder">
+      #Display the content wrapped by glg-betagroup if the user belongs to the specified group
       <glg-betagroup betagroup="recommended_cm_admin">
         You belong to the provided Beta Group!
       </glg-betagroup>
     </div>
     <div id="holder">
+      #Hide the content wrapped by glg-betagroup if the user belongs to the specified group
       <glg-betagroup betagroup="mosaic_hide_cm_rates" rendertemplate=false>
-        You belong to the provided Beta Group! #2
+        You don't belong to the provided Beta Group! #2
       </glg-betagroup>
     </div>
 

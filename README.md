@@ -17,9 +17,9 @@ glg-betagroup
 #Hide the content wrapped by glg-betagroup if the user belongs to the specified group
 <div id="holder">
   <glg-betagroup betagroup="mosaic_hide_cm_rates" rendertemplate=false>
-    You belong to the provided Beta Group! #2
+    You don't belong to the provided Beta Group! #2
   </glg-betagroup>
-</div>`
+</div>
 ```
 ##example cookie
 
