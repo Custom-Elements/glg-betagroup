@@ -4,7 +4,6 @@
   <head>
     <title>glg-betagroup</title>
     <script src="http://localhost:35729/livereload.js"></script>
-    <script src="node_modules/polymer/platform.js"></script>
     <link rel="import" href="node_modules/polymer/polymer.html">
     <link rel="import" href="src/glg-betagroup.html">
     <style>
@@ -14,16 +13,44 @@
     </style>
   </head>
   <body unresolved>
+    <h1>Beta Group Polymer Component Demo</h1>
     <div id="holder">
-      #Display the content wrapped by glg-betagroup if the user belongs to the specified group
-      <glg-betagroup betagroup="recommended_cm_admin">
-        You belong to the provided Beta Group!
+      <p style="width: 50%;">
+        Displays/hides content wrapped by glg-betagroup depending on whether the current user belongs to the
+        specified beta group and whether <i>glg-betagroup.renderTemplate</i> is set to true or false.
+      </p>
+      <p style="width: 50%;">
+        If you see nothing below this message, try modifying the beta group names in demo.html.
+        And, you'll likely want to add <i>127.0.0.1 vega.glgroup.com</i> to your /etc/hosts file,
+        so that browsing to http://vega.glgroup.com:10000/demo.html will properly read your cookies and render.
+      <p>
+    </div>
+    <div id="holder">
+      <glg-betagroup betagroup="mm_orderby_cost" renderTemplate=true>
+        <p>
+          You belong to the beta group <strong>mm_orderby_cost</strong>
+        </p>
       </glg-betagroup>
     </div>
     <div id="holder">
-      #Hide the content wrapped by glg-betagroup if the user belongs to the specified group
-      <glg-betagroup betagroup="mosaic_hide_cm_rates" rendertemplate=false>
-        You don't belong to the provided Beta Group! #2
+      <glg-betagroup betagroup="recommended_cm_admin" renderTemplate=true>
+        <p>
+          You belong to the beta group <strong>recommended_cm_admin</strong>
+        </p>
+      </glg-betagroup>
+    </div>
+    <div id="holder">
+      <glg-betagroup betagroup="mm_orderby_cost" renderTemplate=false>
+        <p>
+          You don't belong to the beta group <strong>mm_orderby_cost</strong>
+        </p>
+      </glg-betagroup>
+    </div>
+    <div id="holder">
+      <glg-betagroup betagroup="recommended_cm_admin" renderTemplate=false>
+        <p>
+          You don't belong to the beta group <strong>recommended_cm_admin</strong>
+        </p>
       </glg-betagroup>
     </div>
 
